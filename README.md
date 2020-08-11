@@ -21,7 +21,7 @@ Small python script that can convert a path stored in your clipboard, e.g. conve
 
 ### Using AutoHotkey
 
-TODO
+With `PasteMenu.ahk` script, [Autohotkey](https://www.autohotkey.com/) can show simple [popup GUI menu](https://www.autohotkey.com/docs/commands/Menu.htm#Remarks) that gets triggered on custom shortcut (in this case Win+Shift+V). You would then select an action and the rest is automated.  
  
 ### Requirements
 
