@@ -1,4 +1,4 @@
-# ConvertPathOnPaste
+# Convert Path On Paste (ctrl+v)
 
 Small python script that can convert a path stored in your clipboard, e.g. convert '\' to '/' for Windows paths on paste.
 
