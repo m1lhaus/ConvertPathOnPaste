@@ -9,12 +9,21 @@ import pyperclip
 CYGPATH = r"C:\cygwin64\bin\cygpath.exe"
 
 
+def normalize(path):
+    path = os.path.normpath(path)
+    if path.startswith("\\") and not path.startswith("\\\\"):
+        path = "\\" + path
+    return path
+
+
 def escape_backslashes(path):
-    return os.path.normpath(path).replace("\\", "\\\\")
+    path = normalize(path)
+    return path.replace("\\", "\\\\")
 
 
 def backward_to_forward_slashes(path):
-    return os.path.normpath(path).replace("\\", "/")
+    path = path = normalize(path)
+    return path.replace("\\", "/")
 
 
 def run_cygpath(path, arg):
@@ -34,7 +43,7 @@ def convert_from_cygpath(path):
 
 
 available_features = {
-    "normalize": os.path.normpath,
+    "normalize": normalize,
     "double": escape_backslashes,
     "forward": backward_to_forward_slashes,
     "to_cygpath": convert_to_cygpath,

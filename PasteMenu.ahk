@@ -7,7 +7,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 RunScript(command)
 {
-    PYTHON=c:\Miniconda3\envs\Python37\python.exe
+    PYTHON=c:\Miniconda3\envs\Python39\python.exe
     SCRIPT=c:\Repository\ConvertPathOnPaste\convert_path.py
     
     RunWait, %PYTHON% %SCRIPT% %command%
