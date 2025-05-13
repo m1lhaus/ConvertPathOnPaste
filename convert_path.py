@@ -11,6 +11,7 @@ CYGPATH = r"C:\cygwin64\bin\cygpath.exe"
 
 def normalize(path):
     path = os.path.normpath(path)
+    path = path.replace("\\\\", "\\")
     if path.startswith("\\") and not path.startswith("\\\\"):
         path = "\\" + path
     return path
@@ -22,7 +23,7 @@ def escape_backslashes(path):
 
 
 def backward_to_forward_slashes(path):
-    path = path = normalize(path)
+    path = normalize(path)
     return path.replace("\\", "/")
 
 

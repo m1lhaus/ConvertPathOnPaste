@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        // -------------- PYTHON ------------------
+        {
+            "name": "(python) convert_path.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "convert_path.py",
+            "console": "integratedTerminal",
+            "args": [
+                "normalize"     // or double, forward, to_cygpath, from_cygpath
+            ],
+        } 
+    ]
+}
